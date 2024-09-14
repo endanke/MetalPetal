@@ -168,7 +168,7 @@ public class MTIAsyncVideoCompositionRequestHandler {
     }
 }
 
-
+#if !os(xrOS)
 public class MTIVideoComposition {
     
     public enum Error: Swift.Error {
@@ -380,3 +380,4 @@ public class MTIVideoComposition {
         videoComposition.instructions = [Compositor.Instruction(handler: handler.handle(request:), timeRange: CMTimeRange(start: .zero, duration: CMTime(value: CMTimeValue.max, timescale: 48000)))]
     }
 }
+#endif
