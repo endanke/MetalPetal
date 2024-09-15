@@ -650,7 +650,7 @@ __attribute__((objc_subclassing_restricted))
             renderPassDescriptor.colorAttachments[0].loadAction = MTLLoadActionLoad;
             commandEncoder = [renderingContext.commandBuffer renderCommandEncoderWithDescriptor:renderPassDescriptor];
         } else {
-            #if TARGET_OS_IOS || TARGET_OS_SIMULATOR || TARGET_OS_MACCATALYST || TARGET_OS_TV
+            #if TARGET_OS_IOS || TARGET_OS_SIMULATOR || TARGET_OS_MACCATALYST || TARGET_OS_TV || TARGET_OS_VISION
                 //we are on simulator/ios/macCatalyst, no texture barrier available, end current commend encoder then create a new one.
                 [commandEncoder endEncoding];
                 renderPassDescriptor.colorAttachments[0].loadAction = MTLLoadActionLoad;
