@@ -168,7 +168,7 @@ public class MTIAsyncVideoCompositionRequestHandler {
     }
 }
 
-#if !os(xrOS)
+#if !os(visionOS)
 public class MTIVideoComposition {
     
     public enum Error: Swift.Error {
